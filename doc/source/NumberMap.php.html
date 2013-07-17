@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+namespace Ulrichsg\Collections;
+
+/**
+ * A map that contains only numeric values, and supports mathematical operations.
+ *
+ * @version 1.0.0
+ * @license MIT
+ * @link https://github.com/ulrichsg/php-collections
+ */
+class NumberMap extends Map {
+
+	/** @internal */
+	private $default;
+
+	/**
+	 * Creates a new NumberMap with the given array as its contents. Omitting the argument creates an empty map.
+	 * @param array $data
+	 * @param mixed $default
+	 * @throws \InvalidArgumentException if $default or one of the array values is not numeric
+	 */
+	public function __construct(array $data = array(), $default = 0) {
+		parent::__construct();
+		foreach ($data as $key =&gt; $value) {
+			$this-&gt;set($key, $value);
+		}
+		if (is_numeric($default)) {
+			$this-&gt;default = $default;
+		} else {
+			throw new \InvalidArgumentException(&quot;Expected number, found &quot;.gettype($default));
+		}
+	}
+
+	/**
+	 * Puts the given key-value pair into the map.
+	 * @param mixed $key
+	 * @param mixed $value
+	 * @throws \InvalidArgumentException if $value is not numeric
+	 */
+	public function set($key, $value) {
+		$this-&gt;assertIsNumeric($value);
+		parent::set($key, $value);
+	}
+
+	/**
+	 * Adds the given value to the one associated to the given key.
+	 * If the key is not in the map yet, put it in and assume the map-wide default value.
+	 * @param mixed $key
+	 * @param mixed $value
+	 * @throws \InvalidArgumentException if $value is not numeric
+	 */
+	public function add($key, $value) {
+		$this-&gt;assertIsNumeric($value);
+		$oldValue = $this-&gt;hasKey($key) ? $this-&gt;get($key) : $this-&gt;default;
+		$this-&gt;set($key, $oldValue + $value);
+	}
+
+	/**
+	 * Returns the sum of all values in the map.
+	 * @return mixed
+	 */
+	public function sum() {
+		return array_sum($this-&gt;data);
+	}
+
+	/** @internal */
+	private function assertIsNumeric($value) {
+		if (!is_numeric($value)) {
+			throw new \InvalidArgumentException(&quot;Expected number, found &quot;.gettype($value));
+		}
+	}
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all()
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

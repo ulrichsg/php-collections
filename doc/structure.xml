@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0b7&#10;">
+  <file path="Map.php" generated-path="Map.html" hash="705eeb75d90e105c974d6bc8c96d26b4" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="Ulrichsg\Collections" line="13" package="">
+      <extends/>
+      <implements>\Countable</implements>
+      <implements>\ArrayAccess</implements>
+      <implements>\IteratorAggregate</implements>
+      <name>Map</name>
+      <full_name>\Ulrichsg\Collections\Map</full_name>
+      <docblock line="13">
+        <description>A simple key-value map. Its main advantage over plain arrays is that you never have to call isset() to avoid
+warnings. Supports square-bracket syntax and foreach loops.</description>
+        <long-description></long-description>
+        <tag name="version" description="" line="13"/>
+        <tag name="license" description="MIT" line="13" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="https://github.com/ulrichsg/php-collections" line="13"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="22" package="">
+        <name>__construct</name>
+        <full_name>\Ulrichsg\Collections\Map::__construct()</full_name>
+        <docblock line="22">
+          <description>Creates a new map with the given array as its contents. Omitting the argument creates an empty map.</description>
+          <long-description></long-description>
+          <tag name="param" description="" line="22" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$data</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="31" package="">
+        <name>hasKey</name>
+        <full_name>\Ulrichsg\Collections\Map::hasKey()</full_name>
+        <docblock line="31">
+          <description>Returns true if the map contains the given key, false otherwise.</description>
+          <long-description></long-description>
+          <tag name="param" description="" line="31" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" description="" line="31" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="41" package="">
+        <name>get</name>
+        <full_name>\Ulrichsg\Collections\Map::get()</full_name>
+        <docblock line="41">
+          <description>If the map contains the given key, returns the associated value. Otherwise, returns the default value.</description>
+          <long-description></long-description>
+          <tag name="param" description="" line="41" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="" line="41" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" description="" line="41" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="50" package="">
+        <name>set</name>
+        <full_name>\Ulrichsg\Collections\Map::set()</full_name>
+        <docblock line="50">
+          <description>Puts the given key-value pair into the map.</description>
+          <long-description></long-description>
+          <tag name="param" description="" line="50" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="" line="50" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="58" package="">
+        <name>remove</name>
+        <full_name>\Ulrichsg\Collections\Map::remove()</full_name>
+        <docblock line="58">
+          <description>Removes the given key and its associated value from the map. Does nothing if the key is not in the map.</description>
+          <long-description></long-description>
+          <tag name="param" description="" line="58" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="68" package="">
+        <name>getIterator</name>
+        <full_name>\Ulrichsg\Collections\Map::getIterator()</full_name>
+        <docblock line="68">
+          <description>Returns an iterator over the map.</description>
+          <long-description></long-description>
+          <tag name="return" description="" line="68" type="\ArrayIterator">
+            <type>\ArrayIterator</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="76" package="">
+        <name>count</name>
+        <full_name>\Ulrichsg\Collections\Map::count()</full_name>
+        <docblock line="76">
+          <description>Returns the number of values in the map.</description>
+          <long-description></long-description>
+          <tag name="return" description="" line="76" type="int">
+            <type>int</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJyVVE1v1DAQPW9+xRx62FbtLlxboK0AoQpVoAIniqpZr5NYdezgsbddIf47Y8dpk+0ulFvi+Xrvzcer07Zui8JgI6lFIeGbdkrUVF2/tVpL4ZU1dFIU84ODAg7gHEg1rZZwK9dHK9RBQoPtDC488YcygMsVGo+VBLuSDlqdHp3DNYEi8DV6WNsARkZzjSsJ3oJArdlM0k/34z+urFrGenfojDIVzeBLaFvruAz9DOjk0cKhuJUeaM3l7gHNEkrrJIoatLUtzTg8ZjjjOsQk4OXsxexFetFKSEMSLi++5n9zC7X3LR3P55XydVjMhG3mIUsxZ4mOxKMcHDQvhEYiuMQWkiCNNIyNRQsMZ6HlIVyfR9bnQkgi/rvw0qG37ryqnKzQS/hVFBOWFc6UYZtBHdNOWmc915FL2Fuix5POqZgw0LdMz0sCZPXuou5wx2BZUwmVWsmsMyArzViE5bQMagafGuU9q5g80VUhggXRZzMgm9avUyNTnbMWHTY5W0IRnyO2sGDtoAwmCQE3N1yEvAvCTwfe8LqLne7vM8nJZM/Xio7eZFOmNfk9YHYlfXCGx8PxQKkyAY38IgceIBpw5ME7hBI198/yq7tTJEewG3UfxWO/7tWl3LCwVu+gUSN9lOtpDOkA55BuIAfov0eXH/sb4C/+jdf1/GIDiKxQGDucFoj70/MYOy5liUH77PU3iqPXHDYin0w72FeRY0LZh3KTTNB6pEVWYSTVKTzRBo4fsmyo9Dn4DVny/WhROeAVsL2Kz6eaEuygRY+0ktuTUcyAX2f7k4ls+IBtIE5XJu7WZg+hdLZ5wA/vLEcaHs+4dHmcY7hKr0z2GVS3UHIJ02BOOfV0S2M64ySYnePLVLfuH98Cle9Ud7/HOPMsdJetP2i7x6r3mI4mKd6ucYYhxs3luhoshAnNgjHZshOdngrZL67xO1CJeJ/HeLqnrRBgcMIfclBMvPVyb9SyZckNeH+vyNN0r/v7205lj0cBnpX/Q+zx7uTVwPyfmb88hm5dItpi/88S3wxtws/J+1kfQv9d/AFWrcij</source>
+  </file>
+  <file path="NumberMap.php" generated-path="NumberMap.html" hash="27443df5ee9ea262365b3411812bcc59" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="Ulrichsg\Collections" line="12" package="">
+      <extends>\Ulrichsg\Collections\Map</extends>
+      <name>NumberMap</name>
+      <full_name>\Ulrichsg\Collections\NumberMap</full_name>
+      <docblock line="12">
+        <description>A map that contains only numeric values, and supports mathematical operations.</description>
+        <long-description></long-description>
+        <tag name="version" description="" line="12"/>
+        <tag name="license" description="MIT" line="12" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="https://github.com/ulrichsg/php-collections" line="12"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="23" package="">
+        <name>__construct</name>
+        <full_name>\Ulrichsg\Collections\NumberMap::__construct()</full_name>
+        <docblock line="23">
+          <description>Creates a new NumberMap with the given array as its contents. Omitting the argument creates an empty map.</description>
+          <long-description></long-description>
+          <tag name="param" description="" line="23" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="param" description="" line="23" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="throws" description="if $default or one of the array values is not numeric" line="23" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$data</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+        <argument line="0">
+          <name>$default</name>
+          <default>0</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="41" package="">
+        <name>set</name>
+        <full_name>\Ulrichsg\Collections\NumberMap::set()</full_name>
+        <docblock line="41">
+          <description>Puts the given key-value pair into the map.</description>
+          <long-description></long-description>
+          <tag name="param" description="" line="41" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="" line="41" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="throws" description="if $value is not numeric" line="41" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="53" package="">
+        <name>add</name>
+        <full_name>\Ulrichsg\Collections\NumberMap::add()</full_name>
+        <docblock line="53">
+          <description>Adds the given value to the one associated to the given key.</description>
+          <long-description>If the key is not in the map yet, put it in and assume the map-wide default value.</long-description>
+          <tag name="param" description="" line="53" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="" line="53" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="throws" description="if $value is not numeric" line="53" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Ulrichsg\Collections" line="63" package="">
+        <name>sum</name>
+        <full_name>\Ulrichsg\Collections\NumberMap::sum()</full_name>
+        <docblock line="63">
+          <description>Returns the sum of all values in the map.</description>
+          <long-description></long-description>
+          <tag name="return" description="" line="63" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJzNVMluE0EQPXu+ooh8GAcv4WqTTVEOFgogBJwiWZ2ZsqeVme5WL3YslH+nehl7EmwJEAcOiZLqWl6996beX6pKZZlgDRrFCoRvteZFZVb3N7KusbBcCjPLssnpaQancA0NU2ArZqGQwjIuDEhRb0G4BqkQ1qx2aIbARAnGKSW1NVRjK6RfvGA1SIWahbZj6uibXq1RGwrAu/HZ+CxEal6gMAh386/pf/EIlbXKTCeTFbeVexgXspm4hHZCW4yKPWIqmmRFzYyBj655QH1HsPHJoigN+L9/ZFmPdoIrLixqQbiooKc0XzOL0C9xyVxtZzEr6xGGG430ZICBwE2n64bQECMIK75GAUxrtgVmgNPiniMU1ozhU8Ot5WIVMpleEV2COGx7CsBG2a1ndxymXSmmWZO69UtmWTfc8Ccsdyjji6203Bi4nwvSgJfXacbtU4HKcwJ8uasAqUk2BLlMePyUKB1wA0LaVlDf2xPjHkgSWDoR+IXFglYzVrvC5h2McB575YPhftY5nA2I716PsBOg6bRbPJjRw1ISD0UFeWxC5PUfcQvnF9APoGJ5r28rbkYXBm3u34ftq2/xTD+0YM7NIiHPWwCDl+V7WHuVqR6wJr+FxMBkUPkomfnJ7ZMir5EKIjhhCEvpyPMn4xVau1XYGZ/wPXfM9NmRO/amoW1GYRdQjGsgT8rw+toOSXdKPxANDf7AC3Hgb8n9C+WBqEQofWSo7dx8bHnfq9IqfkiyLh3XZdmlIyJLHHif0ghZcObpTtEdb5GfeTSyd01aiIuWQdiiHYJyFAthf5qoIaFtM0YbXiK0xgjT/wvaWVn+Fe19WZffwxgyecyumPmA29BtAJdtdJV0GcAUXn4es+zQ97br+/aIkF/QOi2ilsSwPzCsrnenRbxytQ7pkclj1nNNHvdOyeHALHy4RUw3o4PjyEnfk3qYtzDCX5A33RMS3wb/9C6knrur8Jz9BAz0b1s=</source>
+  </file>
+  <package name="global" full_name="global"/>
+  <namespace name="Ulrichsg" full_name="Ulrichsg">
+    <namespace name="Collections" full_name="Ulrichsg\Collections"/>
+  </namespace>
+  <deprecated count="0"/>
+</project>
