@@ -34,6 +34,7 @@ Collection types
 So far the package only provides two collection types:
 * `Map` - basic key-value map
 * `NumberMap` - a map that can do some math on its entries (see the example above)
+
 I'd love to have more, so send me your ideas - or your pull requests :)
 
 Common features
@@ -54,7 +55,7 @@ Installation
 API documentation
 -----------------
 
-[Go here](http://ulrichsg.github.com/php-collections/doc) for PHPDoc-generated documentation.
+[Go here](http://ulrichsg.github.io/php-collections/doc) for PHPDoc-generated documentation.
 
 License
 -------
